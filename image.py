@@ -5,7 +5,7 @@ import urlparse
 
 
 #get request from bbc.com and store it to response variable
-response = requests.get('http://bbc.com/', timeout=20)  
+response = requests.get('http://metropolia.fi/', timeout=20)  
 #html module to parse it and save the results in a XML tree
 parsed_body = html.fromstring(response.content)
 
@@ -23,7 +23,7 @@ print 'Found %s images' % len(images)
 # download all
 for url in images[:]:  
     r = requests.get(url)
-    f = open('/home/henok/Desktop/F-secure/Images/%s' % url.split('/')[-1], 'w')
+    f = open('/home/ubuntu/Desktop/F-secure/Images/%s' % url.split('/')[-1], 'w')
     f.write(r.content)
     f.close()
 
