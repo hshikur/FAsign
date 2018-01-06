@@ -1,6 +1,0 @@
-1. Installed Beautiful Soup library
-$ sudo apt-get install python-bs4
-$ sudo apt-get install python-lxml
-$ sudo apt-get install python-html5lib
-
-//lxml for speed//
