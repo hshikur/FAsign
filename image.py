@@ -4,7 +4,7 @@ import sys
 import urlparse
 
 
-#get request from bbc.com and store it to response variable
+#get request from metropolia.fi and store it to response variable
 response = requests.get('http://metropolia.fi/', timeout=20)  
 #html module to parse it and save the results in a XML tree
 parsed_body = html.fromstring(response.content)
