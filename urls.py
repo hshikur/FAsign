@@ -15,12 +15,11 @@ def get_urls():
 	return out
 print(get_urls())
 
-links = [urlparse.urljoin(response.url, url) for url in links]  
-print 'Found %s urls' % len(links)
-
 
 for url in links[:]:
 	l = requests.get(url)
-	f = open('/home/ubuntu/Desktop/F-secure/Urls/%s' % url.split('/')[-1], 'w')
+#	f = open('/home/ubuntu/Desktop/F-secure/Urls/urls.txt' % url.split('/')[-1], 'w')
+	f = open('/home/ubuntu/Desktop/F-secure/Urls/urls.txt', 'w')
 	f.write(l.content)
 	f.close
+
