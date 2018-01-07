@@ -1,7 +1,6 @@
 import requests
 from lxml import html
 import urlparse
-import sys
 
 def get_urls():
 	begin_url = 'https://bbc.com'
@@ -16,12 +15,12 @@ def get_urls():
 	return out
 print(get_urls())
 
-#links = [urlparse.urljoin(response.url, url) for url in links]  
-#print 'Found %s urls' % len(links)
+links = [urlparse.urljoin(response.url, url) for url in links]  
+print 'Found %s urls' % len(links)
 
 
 for url in links[:]:
 	l = requests.get(url)
-	f = open('/home/ubuntu/Desktop/F-secure/urls.txt/%s' % url.split('/')[-1], 'w')
+	f = open('/home/ubuntu/Desktop/F-secure/Urls/%s' % url.split('/')[-1], 'w')
 	f.write(l.content)
 	f.close
