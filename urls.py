@@ -1,3 +1,4 @@
+import sys
 import requests
 from lxml import html
 import urlparse
@@ -16,9 +17,10 @@ def get_urls():
 	return out
 print(get_urls())
 
+#sys.stdout = open('/home/ubuntu/Desktop/F-secure/urls.txt', 'w')
 for url in links:
 	l = requests.get(out)
-	f = open('/home/ubuntu/Desktop/F-secure/Urls/urls.txt', 'w')
+	f = open('/home/ubuntu/Desktop/F-secure/urls.txt', 'w')
 	f.write(l.content)
 	f.close
 
